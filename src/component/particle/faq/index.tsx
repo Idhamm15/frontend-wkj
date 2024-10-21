@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { faqs } from './data';
 
 const Faq: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -6,6 +7,8 @@ const Faq: React.FC = () => {
   const handleToggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+ 
 
   return (
     <div>
@@ -17,12 +20,7 @@ const Faq: React.FC = () => {
             </h2>
           </div>
           <div className="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16">
-            {[
-              { question: 'How can I get started?', answer: 'Getting started is easy! Sign up for an account, and you\'ll have access to our platform\'s features. No credit card required for the initial signup.' },
-              { question: 'What is the pricing structure?', answer: 'Our pricing structure is flexible. We offer both free and paid plans. You can choose the one that suits your needs and budget.' },
-              { question: 'What kind of support do you provide?', answer: 'We offer comprehensive customer support. You can reach out to our support team through various channels, including email, chat, and a knowledge base.' },
-              { question: 'Can I cancel my subscription anytime?', answer: 'Yes, you can cancel your subscription at any time without any hidden fees. We believe in providing a hassle-free experience for our users.' }
-            ].map((faq, index) => (
+            {faqs.map((faq, index) => (
               <div
                 key={index}
                 className="transition-all duration-200 bg-white border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
@@ -43,7 +41,7 @@ const Faq: React.FC = () => {
                     className="w-6 h-6 text-gray-400 transition-transform"
                     style={{
                       transform: openIndex === index ? 'rotate(0deg)' : 'rotate(-180deg)',
-                      transition: 'transform 0.3s'
+                      transition: 'transform 0.3s',
                     }}
                   >
                     <path
@@ -63,9 +61,9 @@ const Faq: React.FC = () => {
             ))}
           </div>
           <p className="text-center text-gray-600 text-base mt-9">
-            Still have questions?{' '}
+            Masih ada pertanyaan?{' '}
             <span className="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover:underline">
-              Contact our support
+              Hubungi tim support kami
             </span>
           </p>
         </div>
