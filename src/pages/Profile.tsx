@@ -4,12 +4,13 @@ import HeroSection from '../component/includes/hero'
 import Footer from '../component/includes/footer'
 import Blog from '../component/particle/blog'
 import Faq from '../component/particle/faq'
+import ProfilComp from '../component/particle/profiles'
 
 function Profile() {
   return (
     <div>
         <Navbar/>
-        <Blog/>
+        <ProfilComp/>
         <Footer/>
     </div>
   )
