@@ -1,26 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Menu } from 'lucide-react';
 
-interface NavbarProps {
-    showBackground: string;
-}
-
-export default function Navbar({
-
-}) {
-
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); // Change background on scroll
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className='relative flex flex-col 
-      before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 
-      before:opacity-25 before:z-0'>
-      <nav className='fixed top-0 left-0 w-full py-2 px-4 md:px-8 lg:px-12 z-40 transition-all duration-300 ease-in-out
-        bg-transparent shadow-md'>
-        <div className="container mx-auto z-30">
+    <div className='relative flex flex-col'>
+      <nav
+        className={`fixed top-0 left-0 w-full py-2 px-4 md:px-8 lg:px-12 z-40 transition-all duration-300 ease-in-out 
+        ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'}`}
+      >
+        <div className="container mx-auto">
           <div className="flex items-center justify-between">
-            {/* Logo - visible on both desktop and mobile */}
-            <a href='' className="flex-shrink-0 hidden sm:block">
+            {/* Logo */}
+            <a href='/' className="flex-shrink-0 hidden sm:block">
               <img
                 src="/assets/logo.png"
                 className="rounded-2xl"
@@ -29,106 +34,76 @@ export default function Navbar({
                 height={40}
               />
             </a>
+
             {/* Desktop Menu */}
             <div className="hidden lg:flex flex-grow justify-center items-center">
               <ul className="flex pl-36 justify-center gap-16 items-center text-center">
-                <li data-aos="zoom-in" className="text-grey font-bold text-sm">
-                  <a href=''>Beranda</a>
+                <li className="text-grey font-bold text-sm">
+                  <a href='/'>Beranda</a>
                 </li>
-                <li data-aos="zoom-in" className="text-grey font-bold text-sm">
-                  <a href=''>Profil</a>
+                <li className="text-grey font-bold text-sm">
+                  <a href='/profil'>Profil</a>  
                 </li>
-                <li data-aos="zoom-in" className="text-grey font-bold text-sm">
-                  <a href=''>Artikel</a>
+                <li className="text-grey font-bold text-sm">
+                  <a href='/artikel'>Artikel</a>
                 </li>
-                <li data-aos="zoom-in" className="text-grey font-bold text-sm">
-                  <a href=''>Tentang</a>
+                <li className="text-grey font-bold text-sm">
+                  <a href='/tentang'>Tentang</a>
                 </li>
-                <li data-aos="zoom-in" className="text-grey font-bold text-sm">
-                  <a href=''>Kontak</a>
+                <li className="text-grey font-bold text-sm">
+                  <a href='/kontak'>Kontak</a>
                 </li>
               </ul>
             </div>
 
             {/* Account Menu */}
-            <div className="lg:flex hidden items-center text-center gap-2">
-                <button className="text-center inline-block bg-blue-700 text-white py-1 px-8 rounded-full transition transform hover:scale-105 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-800 w-full sm:w-auto">
-                  Jelajahi Sekarang
-                </button>
+            <div className="lg:flex hidden items-center gap-2">
+              <button className="bg-blue-700 text-white py-1 px-8 rounded-full hover:scale-105 hover:bg-blue-800 transition">
+                Jelajahi Sekarang
+              </button>
             </div>
 
-      
-
             {/* Mobile Menu Toggle */}
-            <div className="lg:hidden flex justify-between w-full bg-white h-20 rounded-3xl">
-              <div className="flex items-center">
-                {/* Logo in the left corner */}
-                <a href='' className="flex-shrink-0 justify-start">
-                  <img
-                    src="/assets/logo.png"
-                    className="rounded-2xl"
-                    alt="Logo"
-                    width={40}
-                    height={40}
-                  />
-                </a>
-              </div>
-
-              {/* Menu Button in the right corner */}
-              <div className="flex items-center">
-                <button
-                  className="p-2"
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                  <Menu className="w-6 h-6 text-grey" />
-                </button>
-              </div>
+            <div className="lg:hidden flex items-center">
+              <button
+                className="p-2"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                <Menu className="w-6 h-6 text-grey" />
+              </button>
             </div>
           </div>
         </div>
       </nav>
 
-
+      {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-x-0 top-[70px] bg-white z-40 transition-all duration-300 ease-in-out overflow-hidden ${
-          mobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-        }`}
+        className={`lg:hidden fixed inset-x-0 top-[70px] bg-white z-40 transition-all duration-300 ease-in-out overflow-hidden 
+          ${mobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
         style={{
           transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-100%)',
-          transition: 'max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out',
         }}
       >
-        <div className="container mx-auto px-4 py-2 flex justify-center items-center min-h-[calc(100vh-70px)] bg-white">
+        <div className="container mx-auto px-4 py-2 flex justify-center items-center min-h-[calc(100vh-70px)]">
           <ul className="flex flex-col items-center gap-4 text-center">
             <li>
-              <a href='' className="block py-2 text-grey font-bold text-xl">
-                Beranda
-              </a>
+              <a href='/' className="block py-2 text-grey font-bold text-xl">Beranda</a>
             </li>
             <li>
-              <a href='' className="block py-2 text-grey font-bold text-xl">
-                Profil
-              </a>
+              <a href='/profil' className="block py-2 text-grey font-bold text-xl">Profil</a>
             </li>
             <li>
-              <a href='' className="block py-2 text-grey font-bold text-xl">
-                Artikel
-              </a>
+              <a href='/artikel' className="block py-2 text-grey font-bold text-xl">Artikel</a>
             </li>
             <li>
-              <a href='' className="block py-2 text-grey font-bold text-xl">
-                Tentang
-              </a>
+              <a href='/tentang' className="block py-2 text-grey font-bold text-xl">Tentang</a>
             </li>
             <li>
-              <a href='' className="block py-2 text-grey font-bold text-xl">
-                Kontak
-              </a>
+              <a href='/kontak' className="block py-2 text-grey font-bold text-xl">Kontak</a>
             </li>
-            </ul>
+          </ul>
         </div>
       </div>
-
     </div>
   )
 }

@@ -6,21 +6,21 @@ import 'aos/dist/aos.css';
 
 const slides = [
     {
-      title: "Pameran Pendidikan dan Produk Muslim Terbesar Termegah Berskala Internasional Kini Hadir DiSolo",
-      image: "assets/carousel-1.jpg",
-      subtitle: "International Islamic Edu Fair (IIEF)",
+      title: "Nikmati Keajaiban Wisata Kesehatan Jamu di Kalibakung",
+      image: "assets/carousel-1.jpg",  // Update image paths accordingly
+      subtitle: "Temukan rahasia kesehatan alami dengan jamu tradisional yang diwariskan turun-temurun.",
     },
     {
-      title: "Sed Ut Perspiciatis Unde Omnis",
+      title: "Kunjungi Pusat Kebugaran Alami dengan Jamu Tradisional",
       image: "assets/carousel-2.jpeg",
-      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Sed sit amet facilisis urna.",
+      subtitle: "Rasakan pengalaman penyembuhan holistik dengan terapi jamu dan pijat tradisional di lingkungan yang asri.",
     },
     {
-      title: "Nemo Enim Ipsam Voluptatem",
-      image: "assets/carousel-2.jpeg",
-      subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Sed sit amet facilisis urna.",
+      title: "Jelajahi Manfaat Herbal di Wisata Kesehatan Jamu",
+      image: "assets/carousel-3.jpg",
+      subtitle: "Dapatkan manfaat jamu dari bahan-bahan alami yang diolah secara tradisional untuk kesehatan tubuh dan pikiran.",
     }
-  ];
+  ];    
 
 const HeroSection = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
