@@ -15,12 +15,12 @@ export default function Navbar({
     <div className='relative flex flex-col 
       before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 
       before:opacity-25 before:z-0'>
-      <nav className={`fixed top-0 left-0 w-full py-2 px-4 md:px-8 lg:px-12 z-40 transition-all duration-300 ease-in-out
-        ${isMobile ? 'bg-white' : 'bg-transparent shadow-md'}`}>
+      <nav className='fixed top-0 left-0 w-full py-2 px-4 md:px-8 lg:px-12 z-40 transition-all duration-300 ease-in-out
+        bg-transparent shadow-md'>
         <div className="container mx-auto z-30">
           <div className="flex items-center justify-between">
             {/* Logo - visible on both desktop and mobile */}
-            <a href='' className="flex-shrink-0">
+            <a href='' className="flex-shrink-0 hidden sm:block">
               <img
                 src="/assets/logo.png"
                 className="rounded-2xl"
@@ -29,7 +29,6 @@ export default function Navbar({
                 height={40}
               />
             </a>
-
             {/* Desktop Menu */}
             <div className="hidden lg:flex flex-grow justify-center items-center">
               <ul className="flex pl-36 justify-center gap-16 items-center text-center">
@@ -61,7 +60,21 @@ export default function Navbar({
       
 
             {/* Mobile Menu Toggle */}
-            <div className="lg:hidden flex justify-end w-full bg-white">
+            <div className="lg:hidden flex justify-between w-full bg-white h-20 rounded-3xl">
+              <div className="flex items-center">
+                {/* Logo in the left corner */}
+                <a href='' className="flex-shrink-0 justify-start">
+                  <img
+                    src="/assets/logo.png"
+                    className="rounded-2xl"
+                    alt="Logo"
+                    width={40}
+                    height={40}
+                  />
+                </a>
+              </div>
+
+              {/* Menu Button in the right corner */}
               <div className="flex items-center">
                 <button
                   className="p-2"
