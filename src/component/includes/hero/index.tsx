@@ -1,4 +1,3 @@
-// components/HeroSection2.js
 import React, { useEffect, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import AOS from 'aos';

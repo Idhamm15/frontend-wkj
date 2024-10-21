@@ -19,20 +19,20 @@ export const faqs = [
       question: "Bagaimana Prosedur layanan Pengobatan herbal di WKJ?",
       answer: "Pengobatan herbal di WKJ dimulai dengan konsultasi ahli, diikuti dengan rekomendasi jamu atau terapi yang sesuai dengan kondisi kesehatan pengunjung.",
     },
-    {
-      question: "Bagaimana Prosedur Pemesanan Obat di WKJ saat ini?",
-      answer: "Pemesanan obat di WKJ dapat dilakukan secara langsung di lokasi atau melalui layanan pemesanan online di website resmi WKJ.",
-    },
-    {
-      question: "Tuliskan informasi manfaat/kegunaan dari setiap tanaman Obat",
-      answer: "Kunyit dikenal untuk anti-inflamasi, Jahe membantu pencernaan, Temulawak memperbaiki fungsi hati, dan Daun Kelor kaya antioksidan yang mendukung sistem imun.",
-    },
-    {
-      question: "Apa saja Media Sosial yang dimiliki oleh WKJ?",
-      answer: "WKJ hadir di berbagai media sosial seperti Instagram, Facebook, dan Twitter dengan akun @WisataKesehatanJamu untuk berbagi informasi terbaru.",
-    },
-    {
-      question: "Struktur Organiasai di WKJ apa saja?",
-      answer: "Struktur organisasi di WKJ meliputi direktur utama, manajer operasional, tim ahli herbal, serta staf layanan pelanggan.",
-    },
+    // {
+    //   question: "Bagaimana Prosedur Pemesanan Obat di WKJ saat ini?",
+    //   answer: "Pemesanan obat di WKJ dapat dilakukan secara langsung di lokasi atau melalui layanan pemesanan online di website resmi WKJ.",
+    // },
+    // {
+    //   question: "Tuliskan informasi manfaat/kegunaan dari setiap tanaman Obat",
+    //   answer: "Kunyit dikenal untuk anti-inflamasi, Jahe membantu pencernaan, Temulawak memperbaiki fungsi hati, dan Daun Kelor kaya antioksidan yang mendukung sistem imun.",
+    // },
+    // {
+    //   question: "Apa saja Media Sosial yang dimiliki oleh WKJ?",
+    //   answer: "WKJ hadir di berbagai media sosial seperti Instagram, Facebook, dan Twitter dengan akun @WisataKesehatanJamu untuk berbagi informasi terbaru.",
+    // },
+    // {
+    //   question: "Struktur Organiasai di WKJ apa saja?",
+    //   answer: "Struktur organisasi di WKJ meliputi direktur utama, manajer operasional, tim ahli herbal, serta staf layanan pelanggan.",
+    // },
   ];

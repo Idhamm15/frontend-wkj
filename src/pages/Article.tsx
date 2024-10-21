@@ -1,16 +1,18 @@
 import React from 'react'
 import Navbar from '../component/includes/navbar'
-import HeroSection from '../component/includes/hero'
 import Footer from '../component/includes/footer'
-import Blog from '../component/particle/blog'
-import Faq from '../component/particle/faq'
+import Blog from '../component/includes/blog'
 
 function Article() {
   return (
-    <div>
-        <Navbar/>
-        <Blog/>
-        <Footer/>
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-10">
+          <Blog isHomePage={false} />
+        </div>
+      </main>
+      <Footer />
     </div>
   )
 }

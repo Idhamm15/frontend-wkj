@@ -1,10 +1,7 @@
 import React from 'react'
 import Navbar from '../component/includes/navbar'
-import HeroSection from '../component/includes/hero'
 import Footer from '../component/includes/footer'
-import Blog from '../component/particle/blog'
-import Faq from '../component/particle/faq'
-import AboutComp from '../component/particle/about_comp'
+import AboutComp from '../component/particle/Tentang'
 
 function About() {
   return (
