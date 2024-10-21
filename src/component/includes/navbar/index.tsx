@@ -15,7 +15,7 @@ export default function Navbar() {
     };
   }, []);
 
-  const menuItems = ['Beranda', 'Artikel', 'Tentang', 'Detection AI'];
+  const menuItems = ['Beranda', 'Artikel','Detection AI', 'Tentang' ];
 
   return (
     <div className='relative flex flex-col'>
