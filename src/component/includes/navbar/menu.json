@@ -1,0 +1,75 @@
+{
+    "menuItems": ["Beranda", "Layanan", "Artikel", "Detection AI", "Tentang"],
+    "services": [
+      {
+        "id": 1,
+        "title": "Pelayanan Rawat Jalan Berbasis Jamu",
+        "description": "Layanan pengobatan dengan pendekatan jamu tradisional",
+        "icon": "🏥",
+        "href": "rawat-jalan"
+      },
+      {
+        "id": 2,
+        "title": "Griya Jamu",
+        "description": "Pusat pembelajaran dan pengembangan jamu",
+        "icon": "🌿",
+        "href": "griya-jamu"
+      },
+      {
+        "id": 3,
+        "title": "Laboratorium Klinik",
+        "description": "Fasilitas pengujian dan penelitian klinis",
+        "icon": "🔬",
+        "href": "laboratorium-klinik"
+      },
+      {
+        "id": 4,
+        "title": "Akupuntur & Akupresure",
+        "description": "Terapi pengobatan tradisional",
+        "icon": "💆",
+        "href": "akupuntur-akupresure"
+      },
+      {
+        "id": 5,
+        "title": "Konsultasi Gizi",
+        "description": "Layanan konsultasi nutrisi dan diet",
+        "icon": "🥗",
+        "href": "konsultasi-gizi"
+      },
+      {
+        "id": 6,
+        "title": "Pengolahan Pasca Panen Tanaman Obat",
+        "description": "Fasilitas pengolahan tanaman obat",
+        "icon": "🌱",
+        "href": "pengolahan-tanaman"
+      },
+      {
+        "id": 7,
+        "title": "Penelitian Saintifikasi Jamu",
+        "description": "Riset dan pengembangan jamu",
+        "icon": "📚",
+        "href": "penelitian-jamu"
+      },
+      {
+        "id": 8,
+        "title": "Wisata Edukasi Tanaman Obat",
+        "description": "Program wisata edukasi berbasis tanaman obat",
+        "icon": "🌺",
+        "href": "wisata-edukasi"
+      },
+      {
+        "id": 9,
+        "title": "Pelatihan & Workshop Pemanfaatan Tanaman Obat",
+        "description": "Program pelatihan pengolahan tanaman obat",
+        "icon": "👨‍🏫",
+        "href": "pelatihan-workshop"
+      },
+      {
+        "id": 10,
+        "title": "Produk dan Layanan Bahan Baku Tanaman Obat",
+        "description": "Penyediaan bahan baku tanaman obat berkualitas",
+        "icon": "🌾",
+        "href": "produk-layanan"
+      }
+    ]
+  }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../component/includes/navbar'
 import Footer from '../component/includes/footer'
-import Blog from '../component/includes/blog'
+import Blog from '../component/includes/artikel'
 
 function Article() {
   return (
